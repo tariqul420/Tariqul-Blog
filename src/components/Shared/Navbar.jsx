@@ -19,13 +19,9 @@ const Navbar = async () => {
                         <li className="hover:underline">
                             <Link href='/'>Home</Link>
                         </li>
-                        {
-                            email && (
-                                <li className="hover:underline">
-                                    <Link href='/profile'>Profile</Link>
-                                </li>
-                            )
-                        }
+                        <li className="hover:underline">
+                            <Link href='/profile'>Profile</Link>
+                        </li>
                     </ul>
 
                     {
