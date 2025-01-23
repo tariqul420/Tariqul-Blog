@@ -1,7 +1,10 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { RegisterLink, LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import getUser from "@/lib/getUser";
 
-const Navbar = () => {
+const Navbar = async () => {
+    const { email } = await getUser() || {};
+
     return (
         <nav className="flex justify-between items-center py-4 bg-gray-100">
             <div className="w-10/12 mx-auto flex justify-between items-center">
@@ -18,9 +21,19 @@ const Navbar = () => {
                         <Link href='/profile'>Profile</Link>
                     </li>
                 </ul>
-                <Button>Login</Button>
-            </div>
-        </nav>
+
+                <div className="flex items-center space-x-4">
+                    {
+                        email ? (
+                            <LogoutLink className="btn btn-neutral" postloginredirecturl={`/`}>Log out</LogoutLink>
+                        ) : (<>
+                            <LoginLink className="btn btn-neutral" postloginredirecturl={`/`}>Sign in</LoginLink>
+                            <RegisterLink className="btn btn-neutral" postloginredirecturl={`/`}>Sign up</RegisterLink>
+                        </>)
+                    }
+                </div>
+            </div >
+        </nav >
     );
 };
 
