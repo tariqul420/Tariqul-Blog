@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <header>
           <Navbar />
         </header>
-        <main className="w-10/12 mx-auto min-h-[calc(100vh-144px)]">
+        <main className="w-10/12 mx-auto min-h-[calc(100vh-144px)] my-4">
           {children}
         </main>
         <Footer />
