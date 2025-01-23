@@ -18,7 +18,7 @@ const Navbar = () => {
                         <Link href='/profile'>Profile</Link>
                     </li>
                 </ul>
-                <Button>Button</Button>
+                <Button>Login</Button>
             </div>
         </nav>
     );
