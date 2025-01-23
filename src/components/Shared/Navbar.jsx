@@ -14,21 +14,25 @@ const Navbar = async () => {
                     </span>
                 </div>
                 <ul className="flex font-medium justify-center space-x-4">
-                    <li>
+                    <li className="hover:underline">
                         <Link href='/'>Home</Link>
                     </li>
-                    <li>
-                        <Link href='/profile'>Profile</Link>
-                    </li>
+                    {
+                        email && (
+                            <li className="hover:underline">
+                                <Link href='/profile'>Profile</Link>
+                            </li>
+                        )
+                    }
                 </ul>
 
                 <div className="flex items-center space-x-4">
                     {
                         email ? (
-                            <LogoutLink className="btn btn-neutral" postloginredirecturl={`/`}>Log out</LogoutLink>
+                            <LogoutLink className="btn btn-neutral">Log out</LogoutLink>
                         ) : (<>
-                            <LoginLink className="btn btn-neutral" postloginredirecturl={`/`}>Sign in</LoginLink>
-                            <RegisterLink className="btn btn-neutral" postloginredirecturl={`/`}>Sign up</RegisterLink>
+                            <LoginLink className="btn btn-neutral">Sign in</LoginLink>
+                            <RegisterLink className="btn btn-neutral">Sign up</RegisterLink>
                         </>)
                     }
                 </div>
