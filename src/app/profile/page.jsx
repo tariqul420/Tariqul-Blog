@@ -1,8 +1,8 @@
 import getUser from "@/lib/getUser";
 import Image from "next/image";
 
-const Profile = () => {
-    const user = getUser();
+const Profile = async () => {
+    const user = await getUser();
 
     return (
         <section>
