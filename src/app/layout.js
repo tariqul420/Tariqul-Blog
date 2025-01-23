@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
-          <header>
+          <header className="sticky top-0 z-50">
             <Navbar />
           </header>
           <main className="w-10/12 mx-auto min-h-[calc(100vh-144px)] my-4">

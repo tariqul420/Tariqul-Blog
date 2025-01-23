@@ -6,7 +6,7 @@ const Navbar = async () => {
     const { email } = await getUser() || {};
 
     return (
-        <nav className="flex justify-between items-center py-4 bg-gray-100">
+        <nav className="flex justify-between items-center py-4 bg-gray-100 sticky top-0 z-50">
             <div className="w-10/12 mx-auto flex justify-between items-center">
                 <div className="inline-flex items-center">
                     <span className="flex h-11 w-11 items-center justify-center rounded-md text-heading-6 font-semibold text-2xl bg-black text-white">
