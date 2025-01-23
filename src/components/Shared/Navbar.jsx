@@ -30,14 +30,14 @@ const Navbar = async () => {
                     {
                         email ? (
                             <LogoutLink className="btn btn-neutral">Log out</LogoutLink>
-                        ) : (<>
-                            <LoginLink
-                                postLoginRedirectURL="/"
-                                className="btn btn-neutral">Sign in</LoginLink>
-                            <RegisterLink
-                                postLoginRedirectURL="/"
-                                className="btn btn-neutral">Sign up</RegisterLink>
-                        </>)
+                        ) : (
+                            <>
+                                <LoginLink
+                                    className="btn btn-neutral">Sign in</LoginLink>
+                                <RegisterLink
+                                    className="btn btn-neutral">Sign up</RegisterLink>
+                            </>
+                        )
                     }
                 </div>
             </div >
