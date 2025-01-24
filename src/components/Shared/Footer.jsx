@@ -3,7 +3,7 @@ import { SiWakatime } from "react-icons/si";
 
 const Footer = () => {
     return (
-        <footer className="footer bg-neutral text-neutral-content items-center p-4">
+        <footer className="footer bg-neutral text-neutral-content md:justify-between items-center p-4 flex flex-col md:flex-row">
             <aside className="grid-flow-col items-center">
                 <div className="inline-flex items-center">
                     <span className="flex h-11 w-11 items-center justify-center rounded-md text-heading-6 font-bold text-4xl bg-white text-black">
